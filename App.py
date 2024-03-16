@@ -9,8 +9,8 @@ import cv2
 
 # Load models and class names
 MODEL = tf.saved_model.load('./potato_trained_models/1/')
-TOMATO_MODEL = tf.saved_model.load('./tomato_trained_models/1/')
-PEPPER_MODEL = tf.saved_model.load('./pepper_trained_models/1/')
+TOMATO_MODEL = tf.saved_model.load('./tomato_trained_models/1')
+PEPPER_MODEL = tf.saved_model.load('./pepper_trained_models/1')
 class_names = ['Potato___Early_blight', 'Potato___Late_blight', 'Potato___healthy']
 tomato_classes = ['Tomato_healthy', 'Tomato_Spider_mites_Two_spotted_spider_mite', 'Tomato__Target_Spot', 'Tomato_Septoria_leaf_spot',
  'Tomato__Tomato_mosaic_virus', 'Tomato_Leaf_Mold', 'Tomato_Bacterial_spot', 'Tomato_Late_blight',
