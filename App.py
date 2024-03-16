@@ -8,7 +8,7 @@ import base64
 import cv2
 
 # Load models and class names
-#MODEL = tf.keras.models.load_model('potato_trained_models/1/')
+MODEL = tf.keras.models.load_model('./potato_trained_models/1')
 #MODEL = tf.keras.models.load_model('tomato.h5')
 TOMATO_MODEL = tf.keras.models.load_model('./tomato_trained_models/1')
 #TOMATO_MODEL = tf.keras.models.load_model('tomato.h5')
@@ -173,7 +173,7 @@ def detect_disease(model, class_names):
         st.write("")
         st.write("To obtain more details and accurate treatment, please visit the nearest pharmaceutical or plant pharma facility")
 if selected_option == 'Potato':
-    #detect_disease(MODEL, class_names)
+    detect_disease(MODEL, class_names)
 elif selected_option == 'Tomato':
     detect_disease(TOMATO_MODEL, tomato_classes)
 elif selected_option == 'Pepper':
